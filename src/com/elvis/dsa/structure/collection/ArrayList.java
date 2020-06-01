@@ -46,6 +46,7 @@ public class ArrayList<T> implements List<T> {
         for (; i < size - 1; i++)
             arr[i] = arr[i + 1];
         size--;
+        arr[size] = null;
         return removedElement;
     }
 
