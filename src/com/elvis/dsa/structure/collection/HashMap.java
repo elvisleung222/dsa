@@ -25,6 +25,7 @@ public class HashMap<K, V> implements Map<K, V> {
 
     @Override
     public V put(K key, V value) {
+        // TODO: when reach load factor, increase size and rehashing
         int index = hash(key);
         if (arr[index] == null) {
             arr[index] = new Node(key, value);
